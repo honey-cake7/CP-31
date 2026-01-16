@@ -17,6 +17,13 @@ void vout(vector<int>& a, int n) {
 void solve() {
     ll a, b;
     cin >> a >> b;
+    // 10 7 +1 1
+    // 9 6 +1 3
+    // 8 5    1
+    // 7 4 -1
+    // 6 3 -1 3
+    // So the max GCD will always be the a - b as it increases by one
+    // if the are same then gcd can be made infinite
     if (a - b == 0) {
         cout << 0 << " " << 0 << endl;
         return;
