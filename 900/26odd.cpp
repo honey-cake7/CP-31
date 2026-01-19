@@ -15,10 +15,19 @@ void vout(vector<int>& a, int n) {
 }
 
 void solve() {
-    ll n, m, i, j;
-    cin >> n >> m >> i >> j;
-    cout << 1 << " " << 1 << " " << n << " " << m << endl;
-    // keep both of them in two different corners so he need to walk around the complete perimeter
+    ll n;
+    cin >> n ;
+    //  to check if powers of 2
+    while(n % 2 != 1) {
+        n /= 2;
+    }
+    if(n > 1) {
+        cout << "YES" << endl;
+        return;
+    }
+    cout << "NO\n";
+    
+
 
 }
 
