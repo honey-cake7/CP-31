@@ -15,17 +15,20 @@ void vout(vector<int>& a, int n) {
 }
 
 void solve() {
-    ll n;
-    cin >> n ;
-    //  to check if powers of 2
-    while(n % 2 != 1) {
-        n /= 2;
+    ll n, x;
+    cin >> n >> x;
+    vector<int> a(n);
+    // s is smallest possible by adding all elements
+    // k is largest by taking it each element as ceiling pushes 1.2 to 2 so it adds greater
+    ll s = 0;
+    ll k = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        s += a[i];
+        k += (a[i] + x - 1) / x;
     }
-    if(n > 1) {
-        cout << "YES" << endl;
-        return;
-    }
-    cout << "NO\n";
+    cout << (s + x - 1) / x << " " << k << endl;
+
 }
 
 
